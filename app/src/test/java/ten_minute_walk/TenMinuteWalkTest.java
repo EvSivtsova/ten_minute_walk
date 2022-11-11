@@ -24,4 +24,14 @@ public class TenMinuteWalkTest {
                 assertEquals("Calculates the number of minutes and returns false", expectedLength, walk.getLength(walk_array));
                 assertFalse("Calculates the number of minutes and returns false", result);
         }
+
+        @Test
+        public void shouldReturnFalseIfWalkLengthIsThree() {
+                char[] walk_array = {'w', 's', 'n'};
+                int expectedLength = 3;
+                TenMinuteWalk walk = new TenMinuteWalk();
+                Boolean result = walk.assess(walk_array);
+                assertEquals("Calculates the number of minutes and returns false", expectedLength, walk.getLength(walk_array));
+                assertFalse("Calculates the number of minutes and returns false", result);
+        }
 }

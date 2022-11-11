@@ -8,10 +8,6 @@ public class TenMinuteWalk {
     }
 
     protected int getLength(char[] walk_array) {
-        char[] input_array = {'w'};
-        if (Arrays.equals(input_array, walk_array)) {
-            return 1;
-        }
-        return 2;
+        return walk_array.length;
     }
 }
