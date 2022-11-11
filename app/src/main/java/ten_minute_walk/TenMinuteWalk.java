@@ -8,12 +8,10 @@ public class TenMinuteWalk {
     private int west = 0;
 
     public Boolean assess( char[] walk_array) {
-        char[] west_array_one = {'w'};
-        if (Arrays.equals(walk_array, west_array_one)) {
-            this.west = 1;
-        } else {
-            this.west = 2;
+        for (char direction : walk_array) {
+            this.west++;
         }
+
         if (this.getLength(walk_array) < 10) {
             return false;
         }
