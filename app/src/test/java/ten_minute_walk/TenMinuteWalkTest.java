@@ -46,9 +46,18 @@ public class TenMinuteWalkTest {
         }
 
         @Test
-        public void shouldIncreaseWestValueWhenStepsWest() {
+        public void shouldIncreaseWestValue_WhenDirectedWest() {
                 char[] walk_array = {'w'};
                 int expectedWestValue = 1;
+                TenMinuteWalk walk = new TenMinuteWalk();
+                walk.assess(walk_array);
+                assertEquals("Evaluates the step west", expectedWestValue, walk.getWest());
+        }
+
+        @Test
+        public void shouldIncreaseWestValue_WhenDirectedWest2() {
+                char[] walk_array = {'w', 'w'};
+                int expectedWestValue = 2;
                 TenMinuteWalk walk = new TenMinuteWalk();
                 walk.assess(walk_array);
                 assertEquals("Evaluates the step west", expectedWestValue, walk.getWest());
