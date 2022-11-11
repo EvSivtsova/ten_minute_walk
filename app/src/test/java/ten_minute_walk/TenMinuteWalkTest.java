@@ -44,4 +44,13 @@ public class TenMinuteWalkTest {
                 assertEquals("Evaluates the length of the array", expectedLength, walk.getLength(walk_array));
                 assertTrue ("Calculates the number of minutes and returns true", result);
         }
+
+        @Test
+        public void shouldIncreaseWestValueWhenStepsWest() {
+                char[] walk_array = {'w'};
+                int expectedWestValue = 1;
+                TenMinuteWalk walk = new TenMinuteWalk();
+                walk.assess(walk_array);
+                assertEquals("Evaluates the step west", expectedWestValue, walk.getWest());
+        }
 }
