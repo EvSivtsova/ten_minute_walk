@@ -10,8 +10,11 @@ public class TenMinuteWalk {
 
     public Boolean assess( char[] walk_array) {
         for (char direction : walk_array) {
-            this.south++;
-            this.west++;
+            if (direction == 's') {
+                this.south++;
+            } else {
+                this.west++;
+            }
         }
 
         if (this.getLength(walk_array) < 10) {
