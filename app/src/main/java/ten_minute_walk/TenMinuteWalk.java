@@ -9,14 +9,8 @@ public class TenMinuteWalk {
     private int south;
 
     public Boolean assess( char[] walk_array) {
-        char[] south_array_one = {'s'};
-        if (Arrays.equals(walk_array, south_array_one)) {
-            this.south = 1;
-        } else {
-            this.south = 2;
-        }
-
         for (char direction : walk_array) {
+            this.south++;
             this.west++;
         }
 
