@@ -5,9 +5,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 
 public class TenMinuteWalk {
-    private int west = 0;
+    private int west;
+    private int south;
 
     public Boolean assess( char[] walk_array) {
+        this.south = 1;
         for (char direction : walk_array) {
             this.west++;
         }
@@ -23,6 +25,10 @@ public class TenMinuteWalk {
     }
 
     protected int getWest() {
-        return west;
+        return this.west;
+    }
+
+    protected int getSouth() {
+        return this.south;
     }
 }
