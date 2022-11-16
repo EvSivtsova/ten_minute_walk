@@ -124,4 +124,20 @@ public class TenMinuteWalkTest {
                 assertEquals("Evaluates the steps west", expectedWestValue, walk.getWest());
                 assertEquals("Evaluates the steps north", expectedNorthValue, walk.getNorth());
         }
+
+        @Test
+        public void shouldIncreaseDirectionValues_WhenStepsEastNorthSouthAndWest() {
+                char[] walk_array = {'s', 'w', 's', 'n', 'n', 'n', 'e', 'e', 'e', 'e'};
+                int expectedSouthValue = 2;
+                int expectedWestValue = 1;
+                int expectedNorthValue = 3;
+                int expectedEastValue = 4;
+
+                TenMinuteWalk walk = new TenMinuteWalk();
+                walk.assess(walk_array);
+                assertEquals("Evaluates the steps south", expectedSouthValue, walk.getSouth());
+                assertEquals("Evaluates the steps west", expectedWestValue, walk.getWest());
+                assertEquals("Evaluates the steps north", expectedNorthValue, walk.getNorth());
+                assertEquals("Evaluates the steps north", expectedEastValue, walk.getEast());
+        }
 }

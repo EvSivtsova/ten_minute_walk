@@ -8,6 +8,7 @@ public class TenMinuteWalk {
     private int west;
     private int south;
     private int north;
+    private int east;
 
     public Boolean assess( char[] walk_array) {
         for (char direction : walk_array) {
@@ -15,8 +16,10 @@ public class TenMinuteWalk {
                 this.south++;
             } else if (direction == 'w') {
                 this.west++;
-            } else {
+            } else if (direction == 'n') {
                 this.north++;
+            } else {
+                this.east++;
             }
         }
 
@@ -40,5 +43,9 @@ public class TenMinuteWalk {
 
     public int getNorth() {
         return this.north;
+    }
+
+    public int getEast() {
+        return this.east;
     }
 }
