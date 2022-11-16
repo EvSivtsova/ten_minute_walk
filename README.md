@@ -26,3 +26,7 @@ ten_minute_walk?(['w', 's']) # => false
 ## Output
 
 <img src="https://github.com/EvSivtsova/ten_minute_walk/blob/main/ten_minute_walk_output.png">
+
+## Test coverage
+
+<img src="https://github.com/EvSivtsova/ten_minute_walk/blob/main/ten_minute_walk_test_coverage.png">
