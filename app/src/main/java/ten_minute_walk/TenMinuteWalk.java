@@ -12,11 +12,17 @@ public class TenMinuteWalk {
 
     public Boolean assess(char[] walk_array) {
         this.assignDirections(walk_array);
-
         if (this.getLength(walk_array) < 10) {
             return false;
         }
+        if (!this.pathLeadsToStartingPoint()) {
+            return false;
+        }
         return true;
+    }
+
+    private boolean pathLeadsToStartingPoint() {
+        return this.west - this.east == 0 && this.north - this.south == 0;
     }
 
     private void assignDirections(char[] walk_array) {

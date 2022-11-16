@@ -140,4 +140,12 @@ public class TenMinuteWalkTest {
                 assertEquals("Evaluates the steps north", expectedNorthValue, walk.getNorth());
                 assertEquals("Evaluates the steps north", expectedEastValue, walk.getEast());
         }
+
+        @Test
+        public void shouldReturnFalse_WhenWalkDoesNotReturnToStartingPoint() {
+                char[] walk_array = {'w', 's', 'e', 'n', 'n', 'e', 's', 'w', 'w', 'w'};
+                TenMinuteWalk walk = new TenMinuteWalk();
+                assertFalse("Returns false if the walk doesn't return to the starting point", walk.assess(walk_array));
+        }
+
 }
