@@ -7,13 +7,16 @@ import java.util.Arrays;
 public class TenMinuteWalk {
     private int west;
     private int south;
+    private int north;
 
     public Boolean assess( char[] walk_array) {
         for (char direction : walk_array) {
             if (direction == 's') {
                 this.south++;
-            } else {
+            } else if (direction == 'w') {
                 this.west++;
+            } else {
+                this.north++;
             }
         }
 
@@ -33,5 +36,9 @@ public class TenMinuteWalk {
 
     protected int getSouth() {
         return this.south;
+    }
+
+    public int getNorth() {
+        return this.north;
     }
 }
