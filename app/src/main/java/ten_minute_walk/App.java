@@ -9,6 +9,26 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        TenMinuteWalk walk = new TenMinuteWalk();
+        char[] tenMinuteWalk1 = {'w', 's', 'e', 'e', 'n', 'n', 'e', 's', 'w', 'w'};
+        System.out.print("\nThe first walk is: ");
+        System.out.println(tenMinuteWalk1);
+        System.out.println("Is it a suitable walk? " + walk.assess(tenMinuteWalk1) + "\n");
+
+        char[] tenMinuteWalk2 = {'w', 's', 'e', 'n', 'n', 'e', 's', 'w', 'w', 'w'};
+        System.out.print("The second walk is: ");
+        System.out.println(tenMinuteWalk2);
+        System.out.println("Is it a suitable walk? " + walk.assess(tenMinuteWalk2) + "\n");
+
+        char[] tenMinuteWalk3 = {'w', 's', 'e', 's', 's', 'e', 's', 'w', 'n', 'n'};
+        System.out.print("The third walk is: ");
+        System.out.println(tenMinuteWalk3);
+        System.out.println("Is it a suitable walk? " + walk.assess(tenMinuteWalk3) + "\n");
+
+        char[] tenMinuteWalk4 = {'w', 's'};
+        System.out.print("The fourth walk is: ");
+        System.out.println(tenMinuteWalk4);
+        System.out.println("Is it a suitable walk? " + walk.assess(tenMinuteWalk4) + "\n");
     }
 }
