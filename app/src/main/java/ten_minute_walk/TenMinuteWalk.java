@@ -10,7 +10,16 @@ public class TenMinuteWalk {
     private int north;
     private int east;
 
-    public Boolean assess( char[] walk_array) {
+    public Boolean assess(char[] walk_array) {
+        this.assignDirections(walk_array);
+
+        if (this.getLength(walk_array) < 10) {
+            return false;
+        }
+        return true;
+    }
+
+    private void assignDirections(char[] walk_array) {
         for (char direction : walk_array) {
             if (direction == 's') {
                 this.south++;
@@ -22,11 +31,6 @@ public class TenMinuteWalk {
                 this.east++;
             }
         }
-
-        if (this.getLength(walk_array) < 10) {
-            return false;
-        }
-        return true;
     }
 
     protected int getLength(char @NotNull [] walk_array) {
